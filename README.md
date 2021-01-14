@@ -1,4 +1,4 @@
-MIPS-Datapath is a graphical MIPS simulator written by Andrew Gascoyne-Cecil.
+MIPS-Datapath is a graphical MIPS simulator.
 
 MIPS-Datapath supports a small subset of the full MIPS instruction set. The flow of data within a graphical representation of a MIPS simulator can be displayed in one of three modes: simplified, pipelined, and data forwarding. MIPS-Datapath is designed as a tool for learning about how processors work from the ground up.
 

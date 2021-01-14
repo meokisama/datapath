@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals" />
+  <PropertyGroup Label="Globals">
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>mipsdatapath</RootNamespace>
+    <ProjectGuid>{E658833F-5D00-4697-BE43-2AD509F1CC14}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;WINVER=0x0400;__WXMSW__;wxUSE_GUI=1;_DEBUG;__WXDEBUG__;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(WX_WIDGETS)\include;$(WX_WIDGETS)\include\msvc;$(WX_WIDGETS)\contrib\include;$(GLUT)\include;$(WX_WIDGETS)\lib\mswud</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>comctl32.lib;rpcrt4.lib;ws2_32.lib;winmm.lib;wxmsw30ud_core.lib;wxbase30ud.lib;wxpngd.lib;wxzlibd.lib;wxjpegd.lib;wxtiffd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>libcd.lib;libcid.lib;msvcrt.lib</IgnoreSpecificDefaultLibraries>
+      <AdditionalLibraryDirectories>$(WX_WIDGETS)\lib\vc_lib;$(GLUT)\lib</AdditionalLibraryDirectories>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;WINVER=0x0400;__WXMSW__;wxUSE_GUI=1;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(WX_WIDGETS)\include;$(WX_WIDGETS)\include\msvc;$(WX_WIDGETS)\contrib\include;$(GLUT)\include;$(WX_WIDGETS)\lib\mswu</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>comctl32.lib;rpcrt4.lib;ws2_32.lib;winmm.lib;wxmsw30u_core.lib;wxbase30u.lib;wxpng.lib;wxzlib.lib;wxjpeg.lib;wxtiff.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>libcd.lib;libci.lib;msvcrtd.lib</IgnoreSpecificDefaultLibraries>
+      <AdditionalLibraryDirectories>$(WX_WIDGETS)\lib\vc_lib;$(GLUT)\lib</AdditionalLibraryDirectories>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Image Include="mips-datapath.ico" />
+    <Image Include="small.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Code\Color.h" />
+    <ClInclude Include="Code\Component.h" />
+    <ClInclude Include="Code\Config.h" />
+    <ClInclude Include="Code\Coord.h" />
+    <ClInclude Include="Code\Data.h" />
+    <ClInclude Include="Code\Enums.h" />
+    <ClInclude Include="Code\Icons.h" />
+    <ClInclude Include="Code\Link.h" />
+    <ClInclude Include="Code\Maths.h" />
+    <ClInclude Include="Code\Model.h" />
+    <ClInclude Include="Code\App.h" />
+    <ClInclude Include="Code\Datalist.h" />
+    <ClInclude Include="Code\Dialog.h" />
+    <ClInclude Include="Code\Frame.h" />
+    <ClInclude Include="Code\GLCanvas.h" />
+    <ClInclude Include="Code\Parser.h" />
+    <ClInclude Include="Code\Scanner.h" />
+    <ClInclude Include="Code\Side.h" />
+    <ClInclude Include="Code\Types.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Code\Component.cc" />
+    <ClCompile Include="Code\Config.cc" />
+    <ClCompile Include="Code\Data.cc" />
+    <ClCompile Include="Code\Icons.cc" />
+    <ClCompile Include="Code\Link.cc" />
+    <ClCompile Include="Code\Maths.cc" />
+    <ClCompile Include="Code\Model.cc" />
+    <ClCompile Include="Code\App.cc" />
+    <ClCompile Include="Code\Datalist.cc" />
+    <ClCompile Include="Code\Dialog.cc" />
+    <ClCompile Include="Code\Frame.cc" />
+    <ClCompile Include="Code\GLCanvas.cc" />
+    <ClCompile Include="Code\Parser.cc" />
+    <ClCompile Include="Code\Scanner.cc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
